@@ -1,5 +1,5 @@
 .jumbotron {
-    background-image: url("../images/pexels-photo-1656377.jpeg");
+    background-image: url("../images/jumbo.jpeg");
     color: white;
     background-position: center;
     background-size: 100%;
@@ -11,10 +11,11 @@ h1 {
   text-rendering: optimizeLegibility;
 }
 .retroshadow {
-    color: white;
+    color: green;
     letter-spacing: .05em;
     text-shadow: 
       1px 1px 0px #2c2c2c, 
       2px 2px 0px rgba(0, 0, 0, 0.2);
+      font-size: 70px;
 }
 
