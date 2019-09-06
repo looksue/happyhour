@@ -1,7 +1,4 @@
-//Brian keys
-
 var apiKey= "AIzaSyC3FQD-MCWfgEGbZZ_FCL1RpnJKgRRiGlg";
-
 var Config = {
     apiKey: "AIzaSyC3FQD-MCWfgEGbZZ_FCL1RpnJKgRRiGlg",
     authDomain: "designateddrinker-e35a3.firebaseapp.com",
@@ -42,6 +39,7 @@ req.end(function (res) {
 
 	console.log(res.body);
 });
+//create the firebase event for adding the recipe to the database-Brian
 
 // grab user input/ user types in a submit button with the name of a cocktail-Wynton
 
@@ -61,15 +59,17 @@ req.end(function (res) {
 
 
  });
+//clear the submit button-Wynton
+
+
 
 //create local "temporary" object for holding drink information-Sue
+
 var drinkName = {
     recipe: drinkRecipe,
 }
 
-//clear the submit button-Wynton
 
-//create the firebase event for adding the recipe to the database-Brian
 
 //store everything into a variable-Sue
 var drinkrecipe = childSnapshot.val().name
