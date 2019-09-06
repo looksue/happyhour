@@ -1,4 +1,7 @@
 var apiKey= "AIzaSyC3FQD-MCWfgEGbZZ_FCL1RpnJKgRRiGlg";
+var openBrewApi = c26133f883msh91f4998356d4396p19e1a0jsn3e67fad764aa;
+var cocktailApi = c26133f883msh91f4998356d4396p19e1a0jsn3e67fad764aa;
+
 var Config = {
     apiKey: "AIzaSyC3FQD-MCWfgEGbZZ_FCL1RpnJKgRRiGlg",
     authDomain: "designateddrinker-e35a3.firebaseapp.com",
@@ -12,16 +15,26 @@ var Config = {
   firebase.initializeApp(Config);
   // Reference database service
   var database = firebase.database();
- 
-var openBrewApi = c26133f883msh91f4998356d4396p19e1a0jsn3e67fad764aa;
- 
-var cocktailApi = c26133f883msh91f4998356d4396p19e1a0jsn3e67fad764aa;
- 
-$.ajax({
-  url: queryURL,
-  method: "GET"
-}).then(function(response){
 
+  //adding event listener for the submit button
+  $("#btnSubmit").on("click", function() {
+      event.preventDefault();
+  }
+ 
+ //grab user input
+ var cocktail = $("#drinkName").val();
+
+ //create local vars for drink data /How do you use one input for two results?
+ var addCocktail = {
+ tblOptionOne: drinkName,
+ tblOtptionTwo: drinkName,
+ };
+
+
+    $.ajax({
+  url: queryURL,
+  method: "GET",
+}).then(function(response){
 });
 //upload the drink data to the database-Willaim
 database.ref().push(drinkName);
@@ -31,9 +44,6 @@ var newRow = $("<tr>").append(
     $("<td>").text(drinkName),
     $("<td>").text(Ingredients),
     );
-
-
-
 req.end(function (res) {
 	if (res.error) throw new Error(res.error);
 
@@ -41,38 +51,12 @@ req.end(function (res) {
 });
 //create the firebase event for adding the recipe to the database-Brian
 
-// grab user input/ user types in a submit button with the name of a cocktail-Wynton
-
-
- $("#btnBeer").on("click", function(){
-    console.log("Beer button clicked");
-
- });
-
- $("#btnWine").on("click", function(){
-    console.log("Wine button clicked");
-
- });
-
- $("#btnCocktail").on("click", function(){
-    console.log("Cocktail button clicked");
-
-
- });
 //clear the submit button-Wynton
-
-
 
 //create local "temporary" object for holding drink information-Sue
 
-var drinkName = {
-    recipe: drinkRecipe,
-}
-
-
-
 //store everything into a variable-Sue
-var drinkrecipe = childSnapshot.val().name
+var cocktail = childSnapshot.val().name
 
 
 // append the new row to the table-Sue
