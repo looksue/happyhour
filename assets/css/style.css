@@ -1,23 +1,41 @@
+
 .jumbotron {
-    background-image: url("../images/jumbo.jpeg");
+    
     color: white;
     background-position: center;
     background-size: 100%;
     font-weight: bold;
+    background-size: 50%;
+    background-image: url("../images/file.jpg");
+ }
+
+ .container {
+    background-position: center;
+    border:10px;
+
+ }
+
+ .form-control {
+    padding: 20px;
+    
+ }
+
+.pretty-background {
+   background:
+     linear-gradient(red, transparent),
+     linear-gradient(to top left, lime, transparent),
+     linear-gradient(to top right, blue, transparent);
+   background-blend-mode: screen;
+   height: 100vh;
+
 }
-h1 {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  text-align: center;
-  text-rendering: optimizeLegibility;
+
+.happy {
+   color: white;
+
 }
-.retroshadow {
-    color: green;
-    letter-spacing: .05em;
-    text-shadow: 
-      1px 1px 0px #2c2c2c, 
-      2px 2px 0px rgba(0, 0, 0, 0.2);
-      font-size: 70px;
-}
-.btnSubmit {
-  margin: 0px, 0px, 50px, 0px;
+
+.options{
+   color: black;
+   
 }

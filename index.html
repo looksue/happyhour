@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -22,40 +21,36 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>HH</title>
 
 </head>
 
-<body>
-    <div class="container">
+<body class="pretty-background">
         <div class="jumbotron">
+                
+                <p class="lead">Find Ingredients to your favoite cocktails</p>
+                <hr class="my-4">
+                <p class="lead">
+                    <input type="text" class="form-control" id="drinkName" placeholder="Search Cocktail here">
+                    <br>
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Search</a>
+                </p>
+              </div>
 
-            <h1 class="retroshadow">Happy Hour</h1>
-        </div>
-        <div class="search-table">
-            <input type="text" class="form-control" id="drinkName" placeholder="Search Cocktail here">
-            <button type="submit" class="button" id="btnSubmit">Submit </button>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card mb-4">
-                    <div class="card-header" id='cocktailIngredients'>Cocktail Ingredients</div>
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6" id='tblOptionOne'>
-                                    Option 1
-                                </div>
-                                <div class="col-md-6" id='tblOptionTwo'>
-                                    Option 2
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <script src="assets/javascript/hh.js"></script>
+
+              <table class="table table-hover">
+                <h1 class="happy">Happy Hour</h1>
+                <thead>
+                      <tr class="options">
+                        <th scope="col">Option 1</th>
+                        <th scope="col">Option 2</th>
+                        
+                      </tr>
+  
+                <script src="assets/javascript/dd.js"></script>
+
 </body>
 
 </html>
