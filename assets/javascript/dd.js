@@ -48,8 +48,6 @@ $("#btnSubmit").on("click", function () {
                 var b = document.getElementById("strInstructions");
                 b.innerHTML = "Instructions: " + results[0].strInstructions;
 
-                // put all 15 ingredients and measures on the screen
-                // strIngredient1-15 and strMeasure1-15
 
                 // Put the ingredients on the screen
                 // ========================================================
@@ -76,23 +74,6 @@ $("#btnSubmit").on("click", function () {
                 // if clicked upload the drink to firebase
             }
         }
-
-            /* database.ref().push(drinkName);
-    
-            //create the firebase event for adding the recipe to the database-Brian
-    
-            //store everything into a variable-Sue
-            //firebase function childsnapshot drinkRecipe = database.child.snapShot.val().name
-    
-            //create a new row to add recipe-Willaim
-    
-            // append the new row to the table-Sue
-            //$("#search-table > tbody").append(newRow);
-    
-            // reset the drink name field
-            // $("#drinkName").val("");
-            */
-
         )
     }
 });
