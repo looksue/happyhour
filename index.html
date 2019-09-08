@@ -21,35 +21,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>HH</title>
 
 </head>
 
 <body class="pretty-background">
-        <div class="jumbotron">
-                
-                <p class="lead">Find Ingredients to your favoite cocktails</p>
-                <hr class="my-4">
-                <p class="lead">
-                    <input type="text" class="form-control" id="drinkName" placeholder="Search Cocktail here">
-                    <br>
-                  <a class="btn btn-primary btn-lg" id="btnSubmit" href="#" role="button">Search</a>
-                </p>
-              </div>
+    <div class="jumbotron">
+
+        <p class="lead">Find Ingredients to your favoite cocktails</p>
+        <hr class="my-4">
+        <p class="lead">
+            <form id="drinkForm">
+                <input type="text" class="form-control" id="drinkName" placeholder="Search Cocktail here" required>
+                <p></p>
+                <input type="submit" value="submit" class="btn btn-primary btn-lg" id="btnSubmit" href="#" role="button">
+            </form>
+        </p>
+    </div>
 
 
-              <table class="table table-hover">
-                <h1 class="happy">Happy Hour</h1>
-                <thead>
-                      <tr class="options">
-                        <th scope="col">Option 1</th>
-                        <th scope="col">Option 2</th>
-                        
-                      </tr>
-  
-                <script src="assets/javascript/dd.js"></script>
+    <table class="table table-hover">
+        <h1 class="happy">Happy Hour</h1>
+        <thead>
+            <tr class="options">
+                <th scope="col">Option 1</th>
+                <th scope="col">Option 2</th>
+
+            </tr>
+
+            <script src="assets/javascript/dd.js"></script>
 
 </body>
 
