@@ -28,15 +28,15 @@ $("#btnSubmit").on("click", function () {
     if (drinkName == "") {
         return;
     } else {
-        // get the drink name from the user
-        queryURL = queryURL + drinkName;
-
         // look up the drink recipe
         $.ajax({
-            url: queryURL,
+            url: queryURL + drinkName,
             method: "GET"
         }).then(function (response) {
             results = response.drinks;
+            if (results == null) {
+                return;
+            }
             if (results.length == 0) {
                 return;
             } else {
@@ -60,7 +60,7 @@ $("#btnSubmit").on("click", function () {
                 // ========================================================
 
                 for (i = 1; i <= 15; i++) {
-                    if (eval("results[0].strIngredient" + i) !== "") { // skip blank rows
+                    if (eval("results[0].strIngredient" + i).trim() !== "") { // skip blank rows
                         var newRow = $("<tr>").append(
                             $("<td>").text(eval("results[0].strIngredient" + i)),
                             $("<td>").text(eval("results[0].strMeasure" + i))
@@ -73,9 +73,8 @@ $("#btnSubmit").on("click", function () {
 
                 // if clicked upload the drink to firebase
             }
-        }
-        )
-    }
+        });
+    };
 });
 
 // Function to check letters and numbers
