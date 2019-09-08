@@ -51,104 +51,58 @@ $("#btnSubmit").on("click", function () {
                 // put all 15 ingredients and measures on the screen
                 // strIngredient1-15 and strMeasure1-15
 
-                // create a new row in a variable
-                // NOTE: the API does not pass ingredients and
-                // measures as an array dimension, it just spits
-                // them out as individual columns
-                var newRow1 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient1),
-                    $("<td>").text(results[0].strMeasure1)
-                );
-                var newRow2 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient2),
-                    $("<td>").text(results[0].strMeasure2)
-                );
-                var newRow3 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient3),
-                    $("<td>").text(results[0].strMeasure3)
-                );
-                var newRow4 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient4),
-                    $("<td>").text(results[0].strMeasure4)
-                );
-                var newRow5 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient5),
-                    $("<td>").text(results[0].strMeasure5)
-                );
-                var newRow6 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient6),
-                    $("<td>").text(results[0].strMeasure6)
-                );
-                var newRow7 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient7),
-                    $("<td>").text(results[0].strMeasure7)
-                );
-                var newRow8 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient8),
-                    $("<td>").text(results[0].strMeasure8)
-                );
-                var newRow9 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient9),
-                    $("<td>").text(results[0].strMeasure9)
-                );
-                var newRow10 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient10),
-                    $("<td>").text(results[0].strMeasure10)
-                );
-                var newRow11 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient11),
-                    $("<td>").text(results[0].strMeasure11)
-                );
-                var newRow12 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient12),
-                    $("<td>").text(results[0].strMeasure12)
-                );
-                var newRow13 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient13),
-                    $("<td>").text(results[0].strMeasure13)
-                );
-                var newRow14 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient14),
-                    $("<td>").text(results[0].strMeasure14)
-                );
-                var newRow15 = $("<tr>").append(
-                    $("<td>").text(results[0].strIngredient15),
-                    $("<td>").text(results[0].strMeasure15)
-                );
+                // Put the ingredients on the screen
+                // ========================================================
+                // NOTE: the poorly-designed API does not pass ingredients
+                // or measures as an array dimension [], it just spits
+                // them out as individual columns, so we have to use the
+                // evil "eval" function to take a string and the value of i
+                // and turn them into a pointer to "strIngredienti".
+                // It made the code a lot shorter!
+                // ========================================================
 
-                // append the new rows to the table
+                for (i = 1; i <= 15; i++) {
+                    if (eval("results[0].strIngredient" + i) !== "") { // skip blank rows
+                        var newRow = $("<tr>").append(
+                            $("<td>").text(eval("results[0].strIngredient" + i)),
+                            $("<td>").text(eval("results[0].strMeasure" + i))
+                        )
+                        $("#tblDrink > tbody").append(newRow);
+                    }
+                }
 
-                // give the user an add to favorites button
+                // give the user an "add to favorites button"
 
                 // if clicked upload the drink to firebase
             }
         }
 
-        /*
-            database.ref().push(drinkName);
+            /* database.ref().push(drinkName);
+    
+            //create the firebase event for adding the recipe to the database-Brian
+    
+            //store everything into a variable-Sue
+            //firebase function childsnapshot drinkRecipe = database.child.snapShot.val().name
+    
+            //create a new row to add recipe-Willaim
+    
+            // append the new row to the table-Sue
+            //$("#search-table > tbody").append(newRow);
+    
+            // reset the drink name field
+            // $("#drinkName").val("");
+            */
 
-        //create the firebase event for adding the recipe to the database-Brian
-
-        //store everything into a variable-Sue
-        //firebase function childsnapshot drinkRecipe = database.child.snapShot.val().name
-
-        //create a new row to add recipe-Willaim
-
-        // append the new row to the table-Sue
-        //$("#search-table > tbody").append(newRow);
-
-        // reset the drink name field
-        // $("#drinkName").val("");
-        */
-    };
+        )
+    }
 });
 
 // Function to check letters and numbers
 function alphanumeric(inputtxt) {
     var letterNumber = /^[0-9a-zA-Z]+$/;
-    /*if (inputtxt.value.match(letterNumber)) {
-    return true;
-} else {
-    return false;
-}*/
-
+    if (inputtxt.value.match(letterNumber)) {
+        return true;
+    } else {
+        return false;
+    }
+};

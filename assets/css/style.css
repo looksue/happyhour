@@ -9,12 +9,6 @@
     background-image: url("../images/file.jpg");
  }
 
- .container {
-    background-position: center;
-    border:10px;
-
- }
-
  .form-control {
     padding: 20px;
     
@@ -22,9 +16,9 @@
 
 .pretty-background {
    background:
-     linear-gradient(red, transparent),
-     linear-gradient(to top left, lime, transparent),
-     linear-gradient(to top right, blue, transparent);
+     linear-gradient (black, transparent),
+     linear-gradient(to top left, rgb(10, 10, 10), transparent),
+     linear-gradient(to top right, rgb(10, 10, 10), transparent);
    background-blend-mode: screen;
    height: 100vh;
 
