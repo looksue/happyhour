@@ -38,4 +38,45 @@
 .options{
    color: black;
    
+}@media screen and (max-width: 980px) {
+   body, header, footer {
+       width: 100%;
+   }
+   section {
+       width: 80%;
+       margin-left: 10%;
+   }
+   h1 {
+       margin-left: 10%;
+   }
+   h2 {
+       width: 75%;
+   }
+   input {
+       width: 80%;
+   }
+   textarea {
+       width: 80%;
+   }
 }
+
+@media screen and (max-width: 768px) {
+   body, header, footer {
+       width: 100%;
+   }
+   section {
+       width: 80%;
+       margin-left: 10%;
+   }
+   h1 {
+       margin-left: 10%;
+   }
+   h2 {
+       width: 75%;
+   }
+   input {
+       width: 80%;
+   }
+   textarea {
+       width: 80%;
+   }
