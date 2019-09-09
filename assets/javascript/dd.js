@@ -66,7 +66,7 @@ $("#btnSubmit").on("click", function () {
                         $("#tblDrink > tbody").append(newRow);
                     }
                 }
-
+$("#divFavorites").css("display", "block");
 
             }
         });
