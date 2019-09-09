@@ -3,7 +3,6 @@
     
     color: white;
     background-position: center;
-    background-size: 100%;
     font-weight: bold;
     background-size: 50%;
     background-image: url("../images/file.jpg");
@@ -11,6 +10,7 @@
  
 .lead {
    color: rgb(76, 243, 76);
+   font-weight: bold;
 }
  .container {
     background-position: center;
