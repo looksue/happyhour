@@ -14,8 +14,6 @@ var database = firebase.database()
 var cocktailApi = "c26133f883msh91f4998356d4396p19e1a0jsn3e67fad764aa";
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 var drinkName = "";
-var ingredients = "";
-var drinkRecipe = "";
 var strInstructions = "";
 var results = "";
 
@@ -69,12 +67,88 @@ $("#btnSubmit").on("click", function () {
                     }
                 }
 
-                // give the user an "add to favorites button"
 
-                // if clicked upload the drink to firebase
             }
         });
     };
+});
+// give the user an "add to favorites button"
+$("#btnFavorites").on("click", function () {
+    event.preventDefault();
+    // if clicked upload the drink to firebase
+    //grab drink properties-name, strInstructions, strIngredient, strMeasure
+
+    drinkName = results[0].strDrink;
+    strInstructions = results[0].strInstructions;
+    var strIngredient1 = results[0].strIngredient1;
+    var strIngredient2 = results[0].strIngredient2;
+    var strIngredient3 = results[0].strIngredient3;
+    var strIngredient4 = results[0].strIngredient4;
+    var strIngredient5 = results[0].strIngredient5;
+    var strIngredient6 = results[0].strIngredient6;
+    var strIngredient7 = results[0].strIngredient7;
+    var strIngredient8 = results[0].strIngredient8;
+    var strIngredient9 = results[0].strIngredient9;
+    var strIngredient10 = results[0].strIngredient10;
+    var strIngredient11 = results[0].strIngredient11;
+    var strIngredient12 = results[0].strIngredient12;
+    var strIngredient13 = results[0].strIngredient13;
+    var strIngredient14 = results[0].strIngredient14;
+    var strIngredient15 = results[0].strIngredient15;
+    var strMeasure1 = results[0].strMeasure1;
+    var strMeasure2 = results[0].strMeasure2;
+    var strMeasure3 = results[0].strMeasure3;
+    var strMeasure4 = results[0].strMeasure4;
+    var strMeasure5 = results[0].strMeasure5;
+    var strMeasure6 = results[0].strMeasure6;
+    var strMeasure7 = results[0].strMeasure7;
+    var strMeasure8 = results[0].strMeasure8;
+    var strMeasure9 = results[0].strMeasure9;
+    var strMeasure10 = results[0].strMeasure10;
+    var strMeasure11 = results[0].strMeasure11;
+    var strMeasure12 = results[0].strMeasure12;
+    var strMeasure13 = results[0].strMeasure13;
+    var strMeasure14 = results[0].strMeasure14;
+    var strMeasure15 = results[0].strMeasure15;
+
+    //create new record structure
+    var recAddDrink = {
+        colDrinkName: strDrink,
+        colStrInstructions: strInstructions,
+        colStrIngredient1: strIngredient1,
+        colStrIngredient2: strIngredient2,
+        colStrIngredient3: strIngredient3,
+        colStrIngredient4: strIngredient4,
+        colStrIngredient5: strIngredient5,
+        colStrIngredient6: strIngredient6,
+        colStrIngredient7: strIngredient7,
+        colStrIngredient8: strIngredient8,
+        colStrIngredient9: strIngredient9,
+        colStrIngredient10: strIngredient10,
+        colStrIngredient11: strIngredient11,
+        colStrIngredient12: strIngredient12,
+        colStrIngredient13: strIngredient13,
+        colStrIngredient14: strIngredient14,
+        colStrIngredient15: strIngredient15,
+        colStrMeasure1: strMeasure1,
+        colStrMeasure2: strMeasure2,
+        colStrMeasure3: strMeasure3,
+        colStrMeasure4: strMeasure4,
+        colStrMeasure5: strMeasure5,
+        colStrMeasure6: strMeasure6,
+        colStrMeasure7: strMeasure7,
+        colStrMeasure8: strMeasure8,
+        colStrMeasure9: strMeasure9,
+        colStrMeasure10: strMeasure10,
+        colStrMeasure11: strMeasure11,
+        colStrMeasure12: strMeasure12,
+        colStrMeasure13: strMeasure13,
+        colStrMeasure14: strMeasure14,
+        colStrMeasure15: strMeasure15,
+    }
+
+    database.ref().push(recAddDrink);
+
 });
 
 // Function to check letters and numbers
@@ -85,4 +159,4 @@ function alphanumeric(inputtxt) {
     } else {
         return false;
     }
-};
+}
