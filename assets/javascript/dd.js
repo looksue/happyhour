@@ -11,7 +11,7 @@ var Config = {
 firebase.initializeApp(Config);
 // Reference database service
 var database = firebase.database()
-var cocktailApi = "c26133f883msh91f4998356d4396p19e1a0jsn3e67fad764aa";
+var cocktailAPI = "c26133f883msh91f4998356d4396p19e1a0jsn3e67fad764aa";
 var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 var drinkName = "";
 var strInstructions = "";
@@ -146,10 +146,18 @@ $("#btnFavorites").on("click", function () {
         colStrMeasure14: strMeasure14,
         colStrMeasure15: strMeasure15,
     }
-
     database.ref().push(recAddDrink);
-
 });
+//when new favorite drink is added, fetch and display on screen
+database.ref().on("child_added", function (childSnapshot) {
+    drinkName = childSnapshot.val().colDrinkName;
+    var newRow = $("<tr>").append(
+        $("<td>").text(drinkName)
+    );
+    //append the new row to the table
+    $("#tblFavorites > tbody").append(newRow);
+});
+
 
 // Function to check letters and numbers
 function alphanumeric(inputtxt) {
