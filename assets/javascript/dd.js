@@ -113,7 +113,7 @@ $("#btnFavorites").on("click", function () {
 
     //create new record structure
     var recAddDrink = {
-        colDrinkName: strDrink,
+        colDrinkName: drinkName,
         colStrInstructions: strInstructions,
         colStrIngredient1: strIngredient1,
         colStrIngredient2: strIngredient2,
@@ -151,11 +151,12 @@ $("#btnFavorites").on("click", function () {
 //when new favorite drink is added, fetch and display on screen
 database.ref().on("child_added", function (childSnapshot) {
     drinkName = childSnapshot.val().colDrinkName;
+    console.log("Drink name: " + drinkName);
     var newRow = $("<tr>").append(
         $("<td>").text(drinkName)
     );
     //append the new row to the table
-    $("#tblFavorites > tbody").append(newRow);
+    $("#tblFavorites").append(newRow);
 });
 
 
