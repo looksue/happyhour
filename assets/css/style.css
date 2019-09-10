@@ -1,86 +1,89 @@
+* {
+    color: white;
+}
 
 .jumbotron {
     
-    color: white;
-    background-position: center;
-    font-weight: bold;
-    background-size: 50%;
-    background-image: url("../images/file.jpg");
- }
- 
-.lead {
-   color: rgb(76, 243, 76);
+   color: white;
+   background-position: center;
+   background-size: 100%;
    font-weight: bold;
+   background-size: 50%;
+   background-image: url("../images/file.jpg");
 }
- .container {
-    background-position: center;
-    border:10px;
-
- }
-
- .form-control {
-    padding: 20px;
-    
- }
-
 .pretty-background {
-   background:
-     linear-gradient(red, transparent),
-     linear-gradient(to top left, lime, transparent),
-     linear-gradient(to top right, blue, transparent);
-   background-blend-mode: screen;
-   height: 100vh;
+    background:
+      linear-gradient(gray, transparent),
+      linear-gradient(to top right, black, transparent);
+    background-blend-mode: screen;
+    height: 100vh;
+  
+  }
+
+/* .lead {
+  color: rgb(76, 243, 76);
+} */
+.container {
+   background-position: center;
+   border:10px;
 
 }
+
+.form-control {
+   padding: 20px;
+   
+}
+
 
 .happy {
-   color: white;
+  color: white;
 
 }
 
 .options{
-   color: black;
-   
+  color: black;
+  
 }@media screen and (max-width: 980px) {
-   body, header, footer {
-       width: 100%;
-   }
-   section {
-       width: 80%;
-       margin-left: 10%;
-   }
-   h1 {
-       margin-left: 10%;
-   }
-   h2 {
-       width: 75%;
-   }
-   input {
-       width: 80%;
-   }
-   textarea {
-       width: 80%;
-   }
+  body, header, footer {
+      width: 100%;
+  }
+  section {
+      width: 80%;
+      margin-left: 10%;
+  }
+  h1 {
+      margin-left: 10%;
+  }
+  h2 {
+      width: 75%;
+  }
+  input {
+      width: 80%;
+  }
+  textarea {
+      width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-   body, header, footer {
-       width: 100%;
-   }
-   section {
-       width: 80%;
-       margin-left: 10%;
-   }
-   h1 {
-       margin-left: 10%;
-   }
-   h2 {
-       width: 75%;
-   }
-   input {
-       width: 80%;
-   }
-   textarea {
-       width: 80%;
-   }
+  body, header, footer {
+      width: 100%;
+  }
+  section {
+      width: 80%;
+      margin-left: 10%;
+  }
+  h1 {
+      margin-left: 10%;
+  }
+  h2 {
+      width: 75%;
+  }
+  input {
+      width: 80%;
+  }
+  textarea {
+      width: 80%;
+  }
+  
 }
